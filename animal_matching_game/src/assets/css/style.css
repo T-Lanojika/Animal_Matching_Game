@@ -1,0 +1,140 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
+  }
+  
+  .App {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Header */
+  h1 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d7c7a8;
+    padding: 10px;
+    border: 2px solid rgb(221, 170, 75);
+  }
+  
+  .resultSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Each section takes 30% of the width */
+  }
+  
+  .resultText{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff9800;
+    text-transform: uppercase;
+  }
+  
+  
+  p{
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    border: 2px solid rgb(221, 170, 75);
+    border-bottom: none;
+    height: 500px;
+    width: 30%;
+    margin-right: 10px;
+  }
+  
+  
+  .randomAnimal {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    border: 2px solid rgb(221, 170, 75);
+    border-bottom: none;
+    height: 500px;
+    width: 40%;
+  }
+  
+  .animalGrid {
+    width: 100%;
+    border: 2px solid rgb(221, 170, 75);
+    border-bottom: none;
+    height: 500px;
+    margin-left: 10px;
+  
+  }
+  
+  /* Grid Layout */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #91baed;
+  }
+  
+  .gridImage {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+  }
+  
+  .gridImage:hover {
+    transform: scale(1.1);
+    border-color: #ff9800;
+  }
+  
+  .gridImage.selected {
+    border-color: #ff9800;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .resultSection {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .result, .randomAnimal {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+  
+    .gridImage {
+        width: 70px;
+        height: 70px;
+    }
+  }
+  
