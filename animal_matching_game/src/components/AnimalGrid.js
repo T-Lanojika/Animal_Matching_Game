@@ -1,15 +1,18 @@
-import React from "react";
+import { animals } from "../data/AnimalsDb";
+import "../assets/css/styles.css";
 
-const AnimalGrid = ({ animals, onAnimalClick }) => {
-  return (
-    <div className="grid">
-      {animals.map((animal, index) => (
-        <div key={index} onClick={() => onAnimalClick(animal.name)}>
-          <img src={animal.img} alt={animal.name} />
+
+export default function AnimalGrid({ handleImageClick }){
+    return(
+        <div className="gridContainer">
+        {animals.map((item, index) => (
+        <img 
+            key={index} 
+            src={item.img} 
+            alt={item.name} 
+            className="gridImage"
+            onClick={()=>handleImageClick(item.name)}/>
+            ))}
         </div>
-      ))}
-    </div>
-  );
-};
-
-export default AnimalGrid;
+    )
+}
